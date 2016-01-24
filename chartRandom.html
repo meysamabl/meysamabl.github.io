@@ -2,37 +2,49 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Information Visualization</title>
+    <title>InfoVis-Meysam by meysamabl</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
 	<script type="text/javascript" src="js/d3.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="stylesheets/style.css" media="screen">
 </head>
 <body>
-	<script type="text/javascript">
-		var dataset = []; //Initialize empty array
-		for (var i = 0; i < 25; i++) { //Loop 25 times
-			var newNumber = Math.random() * 30; //New random number (0-30)
-			dataset.push(newNumber); //Add new number to array
-		}
-		d3.select("body").selectAll("div")
-			.data(dataset)
-			.enter()
-			.append("div")
-			.attr("class", "bar")
-			.style("height", function(d) {
-				return (d *5) + "px";
-			});
-		/*
-		d3.csv("data/sampledata.csv", function(data) {
-			dataset = data;
-			
-			//Call some other functions that
-			//generate your visualization, e.g.:
-			generateVisualization();
-			makeAwesomeCharts();
-			makeEvenAwesomerCharts();
-			thankAwardsCommittee();
-		}); 
-		*/
-	</script>
+	<section class="page-header">
+      <h1 class="project-name">InfoVis-Meysam</h1>
+      <h2 class="project-tagline">Information Visualization</h2>
+    </section>
+	<section class="main-content">
+			<script type="text/javascript">
+				var dataset = []; //Initialize empty array
+				for (var i = 0; i < 25; i++) { //Loop 25 times
+					var newNumber = Math.random() * 30; //New random number (0-30)
+					dataset.push(newNumber); //Add new number to array
+				}
+				d3.select("body").selectAll("div")
+					.data(dataset)
+					.enter()
+					.append("div")
+					.attr("class", "bar")
+					.style("height", function(d) {
+						return (d *5) + "px";
+					});
+				/*
+				d3.csv("data/sampledata.csv", function(data) {
+					dataset = data;
+					
+					//Call some other functions that
+					//generate your visualization, e.g.:
+					generateVisualization();
+					makeAwesomeCharts();
+					makeEvenAwesomerCharts();
+					thankAwardsCommittee();
+				}); 
+				*/
+		</script>
+	</section>
+
 </body>
 </html>
